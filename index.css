@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+.container{
+    margin: auto;
+    width: 50%;
+    margin-top: 30px;
+    text-align: center;
+    background-color: rgb(20, 141, 221);
+
+}
+h1{
+    color: white;
+}
+.list-item{
+    color: white;
+}
+.input-create{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    padding: 5px 10px;
+    border-radius: 10px 0 10px 0;
+    border: none;
+}
+.btn-add{
+    padding: 5px 10px;
+    border-radius: 10px 0 10px 0;
+    border: none;
+}
+
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    padding-top: 10px;
+}
+.list-item{
+    color: blue;
+    font-size: 20px;
+    
+}
+.btn-edit{
+    padding: 5px 10px;
+    border-radius: 10px 0 10px 0;
+    border: none;
+    background-color: rgb(20, 141, 221);
+    color: white;
+  
+
+}
+.btn-delete{
+    padding: 5px 10px;
+    border-radius: 10px 0 10px 0;
+    border: none;
+    background-color: rgb(20, 141, 221);
+    color: white;
+
+}
+@media (max-width:575px) {
+    .input-create{
+        margin-top: 12px;
+        margin-bottom: 12px;
+        padding: 4px 2px;
+        border-radius: 10px 0 10px 0;
+        border: none;
+    }
+    .btn-add{
+        margin-bottom: 10px;
+        padding: 4px 9px;
+        border-radius: 10px 0 10px 0;
+        border: none;
+    }
+    .list-item{
+        color: blue;
+        font-size: 16px;
+    }
+    .btn-edit{
+        padding: 4px 9px;
+        border-radius: 10px 0 10px 0;
+        border: none;
+        background-color: rgb(20, 141, 221);
+        color: white;
+    }
+    .btn-delete{
+        padding: 4px 9px;
+        border-radius: 10px 0 10px 0;
+        border: none;
+        background-color: rgb(20, 141, 221);
+        color: white;
+    }
+}
