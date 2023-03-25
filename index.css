@@ -1,95 +1,69 @@
 *{
     margin: 0;
     padding: 0;
-    list-style: none;
-}
-
-
+          }
 .container{
-    margin: auto;
-    width: 50%;
     margin-top: 30px;
-    text-align: center;
-    background-color: rgb(20, 141, 221);
-
+        }
+body{
+    background: rgb(238,174,202);
+    background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+        }
+.form-control{
+    margin-top: 100px;
+    position: relative;
 }
-h1{
-    color: white;
+.text{
+    color: rgb(202, 28, 164);
+   
+        }
+.btn-add{
+    background-color: rgb(96, 239, 127);
+    margin-top: 10px;
+    font-weight: 600;
+    margin-left: 700px;
+    position: absolute;
+    top: 120px;
+    left: 500px;
+            }
+.btn-delete{
+    background-color: rgb(235, 37, 37);
+    margin-top: 10px;
+    font-weight: 600;
+    position: absolute;
+   top: 120px;
+    right: 200px;
+                
 }
-.list-item{
-    color: white;
+.btn-add .btn-delete:hover{
+    color: rgb(235, 27, 45);
+            }
+@media (max-width: 575px) {          
+ .btn-add .btn-delete:hover{
+    color: rgb(0, 255, 81);
 }
-.input-create{
-    margin-top: 30px;
-    margin-bottom: 20px;
-    padding: 5px 10px;
-    border-radius: 10px 0 10px 0;
-    border: none;
+    
+.input{
+    color: rgb(245, 205, 74);
 }
 .btn-add{
-    padding: 5px 10px;
-    border-radius: 10px 0 10px 0;
-    border: none;
+    background-color: rgb(96, 239, 127);
+    margin-top: 10px;
+    font-weight: 600;
+    position: absolute;
+    top: 171px;
+    left: -608px;
+    }
+    .btn-delete {
+        background-color: rgb(235, 37, 37);
+        margin-top: 10px;
+        font-weight: 600;
+        position: absolute;
+        top: 171px;
+        right: 88px;
+    }
 }
 
-.list{
-    display: flex;
-    justify-content: space-evenly;
-    background-color: white;
-    padding-top: 10px;
-}
-.list-item{
-    color: blue;
-    font-size: 20px;
+
     
-}
-.btn-edit{
-    padding: 5px 10px;
-    border-radius: 10px 0 10px 0;
-    border: none;
-    background-color: rgb(20, 141, 221);
-    color: white;
-  
-
-}
-.btn-delete{
-    padding: 5px 10px;
-    border-radius: 10px 0 10px 0;
-    border: none;
-    background-color: rgb(20, 141, 221);
-    color: white;
-
-}
-@media (max-width:575px) {
-    .input-create{
-        margin-top: 12px;
-        margin-bottom: 12px;
-        padding: 4px 2px;
-        border-radius: 10px 0 10px 0;
-        border: none;
-    }
-    .btn-add{
-        margin-bottom: 10px;
-        padding: 4px 9px;
-        border-radius: 10px 0 10px 0;
-        border: none;
-    }
-    .list-item{
-        color: blue;
-        font-size: 16px;
-    }
-    .btn-edit{
-        padding: 4px 9px;
-        border-radius: 10px 0 10px 0;
-        border: none;
-        background-color: rgb(20, 141, 221);
-        color: white;
-    }
-    .btn-delete{
-        padding: 4px 9px;
-        border-radius: 10px 0 10px 0;
-        border: none;
-        background-color: rgb(20, 141, 221);
-        color: white;
-    }
-}
+        

@@ -1,47 +1,34 @@
-let form=document.getElementById('form-create')
-let inp=document.querySelector('.input-create')
-let ul=document.querySelector('.list-group')
-//check
-let todo =JSON.parse(localStorage.getItem('list'))? JSON.parse(localStorage.getItem('list')):[]
-//getTodos
-form.addEventListener('submit',(e)=>{
-  e.preventDefault()
-  const todoText = inp.value
-  form.reset()
-  todo.push({text:todoText})
-  setTodos()
-  showTodos()
-  
-})
-//setTodos
-function setTodos(){
-  localStorage.setItem('list',JSON.stringify(todo))
-}
-//showTidos
-function showTodos(){
-  const todo=JSON.parse(localStorage.getItem('list'))
-  ul.innerHTML=''
-  todo.forEach((item,i)=>{
-    ul.innerHTML+=`
-    <div class="list">
-    <li class="list-item ">${item.text}</li>
-      
-        <div class="button">  
-           <button class="btn-edit">Edit</button>
-          <button onclick='(deleteTodo(${i}))' class="btn-delete">Delete</button>
-        </div>
+let ul=document.querySelector(".ulh1")
+let form =document.querySelector(".form")
+let input=document.querySelector(".form-control")
+let clear=document.querySelector(".btn-delete")
 
-           </div>
-           <hr>
-    `
-  })
+let todos=JSON.parse(localStorage.getItem("list"))||[]
+
+form.addEventListener("submit",(e)=>{
+   e.preventDefault()
+   const inputText=input.value
+   form.reset()
+   todos.push({name:inputText})
+   setTodos()
+   showTodos()
+})
+function setTodos(){
+    localStorage.setItem("list",JSON.stringify(todos))
 }
-//deleteTodo
-function deleteTodo(id){
-  const deletedTodos=todo.filter((item,i)=>{
-    return i!==id
-  })
-  todo=deletedTodos
-  setTodos()
-  showTodos()
+function showTodos(){
+    const todos=JSON.parse(localStorage.getItem("list"))
+    ul.innerHTML=''
+    todos.forEach((elem)=>{
+        ul.innerHTML+=`
+        <h1 class="text">${elem.name}</h1>
+        `
+    })
+}
+
+clear.onclick=()=>{
+    localStorage.setItem("list",JSON.stringify([]))
+    todos=[]
+    setTodos()
+    showTodos()
 }
